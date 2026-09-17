@@ -1,56 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Land Contabilidade Consultiva & Digital | Menos burocracia, mais lucro</title>
-  <meta name="description" content="Contabilidade consultiva e digital de alta performance. Reduza impostos legalmente, elimine riscos fiscais e tenha suporte humano direto no WhatsApp.">
-  <meta name="keywords" content="contabilidade consultiva, contabilidade digital, planejamento tributário, abertura de empresa, folha de pagamento, assessoria contábil">
+  <title>Gigatech Informática | Assistência Técnica Avançada & TI em Salvador e Lauro de Freitas</title>
+  <meta name="description" content="Assistência técnica especializada em notebooks, MacBooks, reparo de placas-mãe e contratos corporativos de TI em Salvador e Lauro de Freitas. +17 anos de excelência e garantia de até 12 meses.">
   
-  <!-- Open Graph / Redes Sociais -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Land Contabilidade Consultiva & Digital">
-  <meta property="og:description" content="Menos burocracia fiscal, mais lucro e tempo para o seu negócio crescer. Fale com nossos contadores especialistas.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80">
-  
-  <!-- Favicon SVG -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310B981'><path d='M3 3v18h18V3H3zm16 16H5V5h14v14zM11 7h2v10h-2V7zm-4 4h2v6H7v-6zm8-2h2v8h-2V9z'/></svg>">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230ea5e9'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
 
-  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            navy: {
-              900: '#0B192C',
-              800: '#112239',
-              700: '#1E3E62',
-              600: '#2A4E78',
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
             },
-            emerald: {
-              500: '#10B981',
-              600: '#059669',
-              700: '#047857',
+            tech: {
+              50: '#f0f9ff',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              900: '#0c4a6e',
+              950: '#082f49',
             },
-            slate: {
-              50: '#F8FAFC',
-              100: '#F1F5F9',
-              200: '#E2E8F0',
-              300: '#CBD5E1',
-              700: '#334155',
-              800: '#1E293B',
+            dark: {
+              800: '#1e293b',
+              850: '#131c2e',
+              900: '#0f172a',
+              950: '#070b14',
             }
           },
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           }
         }
       }
@@ -60,654 +55,870 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Custom CSS -->
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white flex flex-col min-h-screen">
+<body class="bg-slate-50 dark:bg-dark-950 text-slate-800 dark:text-slate-100 antialiased selection:bg-tech-500 selection:text-white font-sans tech-grid-bg relative overflow-x-hidden transition-colors duration-200">
 
-  <!-- =========================================================================
-       1. HEADER / BARRA DE NAVEGAÇÃO
-       ========================================================================= -->
-  <header id="main-nav" class="fixed top-0 left-0 w-full z-50 nav-glass transition-all duration-300">
+  <!-- ======================================================
+       HEADER / NAVEGAÇÃO
+       ====================================================== -->
+  <header class="sticky top-0 z-50 w-full backdrop-blur-xl bg-white/90 dark:bg-dark-950/85 border-b border-slate-200 dark:border-slate-800/80 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- Logo -->
-        <a href="#inicio" class="flex items-center gap-3 group">
-          <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
-            <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+        <!-- LOGO -->
+        <a href="#inicio" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-tech-500 rounded-lg p-1">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-tech-500 to-emerald-500 p-0.5 shadow-lg shadow-tech-500/20 group-hover:scale-105 transition-transform duration-300">
+            <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
+              <i data-lucide="cpu" class="w-6 h-6 text-tech-400"></i>
+            </div>
           </div>
           <div class="flex flex-col">
-            <span class="text-xl font-bold tracking-tight text-white font-heading leading-tight">LAND</span>
-            <span class="text-[11px] font-semibold tracking-wider text-emerald-400 uppercase">Contabilidade Consultiva</span>
+            <span class="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5">
+              GIGATECH <span class="text-xs font-semibold px-1.5 py-0.5 rounded bg-tech-500/10 text-tech-600 dark:text-tech-400 border border-tech-500/30">LAB</span>
+            </span>
+            <span class="text-[11px] font-medium tracking-wider text-slate-500 dark:text-slate-400 uppercase -mt-0.5">Informática & TI</span>
           </div>
         </a>
 
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center gap-7">
-          <a href="#inicio" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Início</a>
-          <a href="#sobre" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Sobre Nós</a>
-          <a href="#servicos" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Serviços</a>
-          <a href="#processo" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Processo</a>
-          <a href="#segmentos" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Segmentos</a>
-          <a href="#faq" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">FAQ</a>
-          <a href="#contato" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Contato</a>
+        <!-- DESKTOP NAVIGATION -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-600 dark:text-slate-300">
+          <a href="#inicio" class="hover:text-slate-950 dark:hover:text-white transition-colors">Início</a>
+          <a href="#para-voce" class="hover:text-slate-950 dark:hover:text-white transition-colors">Para Você</a>
+          <a href="#para-empresas" class="hover:text-slate-950 dark:hover:text-white transition-colors">Para Empresas</a>
+          <a href="#laboratorio" class="hover:text-slate-950 dark:hover:text-white transition-colors">Laboratório</a>
+          <a href="#unidades" class="hover:text-slate-950 dark:hover:text-white transition-colors">Unidades</a>
+          <a href="#faq" class="hover:text-slate-950 dark:hover:text-white transition-colors">Dúvidas</a>
         </nav>
 
-        <!-- CTA Header Button -->
+        <!-- CTA HEADER & THEME TOGGLE -->
         <div class="hidden sm:flex items-center gap-3">
-          <a href="#" data-wa-action="header" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-emerald-500 hover:bg-emerald-600 glow-emerald transition-all transform hover:-translate-y-0.5">
+          <!-- BOTÃO ALTERNADOR DE MODO (DARK / CLEAN) -->
+          <button type="button" 
+                  class="theme-toggle-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-600 transition-all text-xs font-semibold"
+                  title="Alternar Modo de Cor">
+            <i data-lucide="sun" class="theme-icon-sun w-4 h-4 text-amber-500 hidden"></i>
+            <i data-lucide="moon" class="theme-icon-moon w-4 h-4 text-tech-500 dark:text-tech-400"></i>
+            <span class="theme-label">Modo Clean</span>
+          </button>
+
+          <a href="https://wa.me/5571987564072?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Gigatech%20Inform%C3%A1tica." 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-emerald-500/15 hover:bg-emerald-500 text-emerald-700 dark:text-emerald-400 hover:text-white border border-emerald-500/30 hover:border-emerald-500 text-sm font-semibold transition-all duration-200 shadow-sm hover:shadow-emerald-500/25">
             <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>Falar no WhatsApp</span>
+            <span>Fale com um Especialista</span>
           </a>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <div class="flex lg:hidden">
-          <button id="mobile-menu-btn" type="button" aria-label="Abrir menu" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-navy-800 focus:outline-none">
-            <i id="menu-icon-open" data-lucide="menu" class="w-6 h-6"></i>
-            <i id="menu-icon-close" data-lucide="x" class="w-6 h-6 hidden"></i>
+        <!-- MOBILE HAMBURGER BUTTON -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <button type="button" 
+                  class="theme-toggle-btn p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none" 
+                  aria-label="Alternar tema">
+            <i data-lucide="sun" class="theme-icon-sun w-5 h-5 text-amber-500 hidden"></i>
+            <i data-lucide="moon" class="theme-icon-moon w-5 h-5 text-tech-400"></i>
+          </button>
+
+          <button id="mobile-menu-button" type="button" aria-expanded="false" class="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 focus:outline-none focus:ring-2 focus:ring-tech-500">
+            <span class="sr-only">Abrir menu</span>
+            <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
-
       </div>
     </div>
 
-    <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-navy-900 border-b border-navy-700 px-4 pt-3 pb-6 shadow-2xl transition-all">
-      <nav class="flex flex-col gap-3">
-        <a href="#inicio" class="px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-800 hover:text-emerald-400 transition-colors">Início</a>
-        <a href="#sobre" class="px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-800 hover:text-emerald-400 transition-colors">Sobre Nós</a>
-        <a href="#servicos" class="px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-800 hover:text-emerald-400 transition-colors">Serviços</a>
-        <a href="#processo" class="px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-800 hover:text-emerald-400 transition-colors">Processo</a>
-        <a href="#segmentos" class="px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-800 hover:text-emerald-400 transition-colors">Segmentos</a>
-        <a href="#faq" class="px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-800 hover:text-emerald-400 transition-colors">FAQ</a>
-        <a href="#contato" class="px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-800 hover:text-emerald-400 transition-colors">Contato</a>
-        <div class="pt-3 border-t border-navy-700">
-          <a href="#" data-wa-action="header" target="_blank" class="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-base font-semibold text-white bg-emerald-500 hover:bg-emerald-600 glow-emerald transition-all">
-            <i data-lucide="message-circle" class="w-5 h-5"></i>
-            <span>Falar no WhatsApp</span>
-          </a>
-        </div>
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-dark-900/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3">
+      <nav class="flex flex-col space-y-3 text-base font-medium text-slate-700 dark:text-slate-300">
+        <a href="#inicio" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-950 dark:hover:text-white">Início</a>
+        <a href="#para-voce" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-950 dark:hover:text-white">Para Você (Notebooks & PCs)</a>
+        <a href="#para-empresas" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-950 dark:hover:text-white">Para Empresas (Suporte de TI)</a>
+        <a href="#laboratorio" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-950 dark:hover:text-white">Laboratório</a>
+        <a href="#unidades" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-950 dark:hover:text-white">Unidades</a>
+        <a href="#faq" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-950 dark:hover:text-white">Dúvidas</a>
       </nav>
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="https://wa.me/5571987564072?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Gigatech%20Inform%C3%A1tica." 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-emerald-500 text-white font-semibold shadow-lg shadow-emerald-500/20">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Fale com um Especialista</span>
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- =========================================================================
-       2. SEÇÃO HERO
-       ========================================================================= -->
-  <section id="inicio" class="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-b from-navy-900 via-navy-800 to-navy-900 text-white overflow-hidden">
-    <!-- Subtle Background Glows -->
-    <div class="absolute -top-40 -left-40 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute top-1/2 -right-40 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <!-- ======================================================
+       SEÇÃO 1: HERO SECTION
+       ====================================================== -->
+  <section id="inicio" class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+    <!-- FUNDO DE TELA COM IMAGEM EM ALTA RESOLUÇÃO E ANIMAÇÃO SUAVE -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+      <!-- Imagem de alta resolução com animação Ken Burns suave -->
+      <div class="w-full h-full animate-hero-bg">
+        <img src="images/hero-lab.jpg" 
+             alt="Laboratório de Tecnologia Avançada e Recuperação Eletrônica Gigatech" 
+             loading="eager"
+             fetchpriority="high"
+             class="w-full h-full object-cover object-center opacity-70 dark:opacity-85 filter brightness-105 contrast-110 dark:brightness-110 dark:contrast-115">
+      </div>
+      
+      <!-- Sobreposição gradiente translúcida calibrada (deixa a imagem e os circuitos visíveis no Modo Dark) -->
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-50/75 via-slate-50/45 to-slate-50 dark:from-dark-950/45 dark:via-dark-950/25 dark:to-dark-950/90"></div>
+
+      <!-- Brilho radial cibernético animado -->
+      <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-gradient-to-br from-tech-500/20 via-emerald-500/15 to-transparent rounded-full blur-3xl animate-ambient-glow"></div>
+    </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-        
-        <!-- Left Hero Copy -->
-        <div class="lg:col-span-7 flex flex-col items-start">
-          
-          <!-- Badge / Selo -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-semibold mb-6 tracking-wide">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            EFICIÊNCIA, SEGURANÇA &amp; CRESCIMENTO
-          </div>
-
-          <!-- H1 Principal -->
-          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-heading tracking-tight leading-tight mb-6">
-            Menos burocracia fiscal, <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">mais lucro e tempo</span> para o seu negócio crescer.
-          </h1>
-
-          <!-- Subtítulo -->
-          <p class="text-base sm:text-lg md:text-xl text-slate-300 font-normal leading-relaxed mb-8 max-w-2xl">
-            Contabilidade consultiva e digital de alta performance. Assumimos suas obrigações tributárias e trabalhistas com agilidade tecnológica e suporte humano direto.
-          </p>
-
-          <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#" data-wa-action="hero" target="_blank" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-bold text-white bg-emerald-500 hover:bg-emerald-600 glow-emerald transition-all transform hover:-translate-y-0.5">
-              <i data-lucide="message-circle" class="w-5 h-5"></i>
-              <span>Falar com Especialista via WhatsApp</span>
-            </a>
-
-            <a href="#servicos" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-base font-semibold text-slate-200 bg-white/5 hover:bg-white/10 border border-white/15 backdrop-blur-sm transition-all">
-              <span>Conhecer Nossas Soluções</span>
-              <i data-lucide="arrow-down" class="w-4 h-4 text-emerald-400"></i>
-            </a>
-          </div>
-
-          <!-- Trust Badges -->
-          <div class="pt-6 border-t border-white/10 w-full grid grid-cols-3 gap-4 text-left">
-            <div>
-              <div class="flex items-center gap-1.5 text-emerald-400 font-bold text-lg sm:text-xl font-heading">
-                <i data-lucide="shield-check" class="w-5 h-5"></i>
-                <span>100%</span>
-              </div>
-              <span class="text-xs text-slate-400">Compliance &amp; Blindagem</span>
-            </div>
-            <div>
-              <div class="flex items-center gap-1.5 text-emerald-400 font-bold text-lg sm:text-xl font-heading">
-                <i data-lucide="zap" class="w-5 h-5"></i>
-                <span>&lt; 15 min</span>
-              </div>
-              <span class="text-xs text-slate-400">Tempo médio de resposta</span>
-            </div>
-            <div>
-              <div class="flex items-center gap-1.5 text-emerald-400 font-bold text-lg sm:text-xl font-heading">
-                <i data-lucide="award" class="w-5 h-5"></i>
-                <span>CRC Ativo</span>
-              </div>
-              <span class="text-xs text-slate-400">Conselho Regional Regular</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right Hero Visual -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-md lg:max-w-none">
-            <!-- Background Decorative Frame -->
-            <div class="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-emerald-500/30 to-blue-500/20 blur-xl opacity-70"></div>
-            
-            <!-- Main Hero Image -->
-            <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-navy-800">
-              <img 
-                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80" 
-                alt="Empresários em reunião estratégica de alinhamento com gráficos e tecnologia" 
-                class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
-                loading="lazy"
-              >
-              <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-transparent to-transparent"></div>
-            </div>
-
-            <!-- Floating Overlay Card: Redução Tributária -->
-            <div class="absolute -bottom-6 -left-4 sm:-left-8 bg-navy-900/95 border border-white/15 backdrop-blur-md rounded-xl p-4 shadow-xl flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400">
-                <i data-lucide="trending-up" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <p class="text-xs font-semibold text-slate-300">Economia Fiscal Média</p>
-                <p class="text-sm font-bold text-white font-heading">+32% de fluxo de caixa</p>
-              </div>
-            </div>
-
-            <!-- Floating Overlay Card: Suporte Humano -->
-            <div class="absolute -top-6 -right-4 sm:-right-6 bg-navy-900/95 border border-white/15 backdrop-blur-md rounded-xl p-3.5 shadow-xl hidden sm:flex items-center gap-3">
-              <div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></div>
-              <span class="text-xs font-semibold text-slate-200">Assessoria WhatsApp em Tempo Real</span>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       3. CARDS DE SERVIÇOS (GRID DE 4 COLUNAS)
-       ========================================================================= -->
-  <section id="servicos" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-100">
-          NOSSAS ESPECIALIDADES
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-navy-900 mt-4 mb-4 tracking-tight">
-          Soluções completas para cada ciclo da sua empresa
-        </h2>
-        <p class="text-base sm:text-lg text-slate-600">
-          Deixe a complexidade das normas fiscais com quem entende e mantenha o foco total na expansão da sua operação.
-        </p>
-      </div>
-
-      <!-- 4 Columns Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-        
-        <!-- Card 1: Gestão Fiscal & Contábil Completa -->
-        <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-7 card-hover flex flex-col justify-between group">
-          <div>
-            <div class="w-14 h-14 rounded-xl bg-navy-900 text-emerald-400 flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-colors shadow-sm">
-              <i data-lucide="file-check-2" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-bold font-heading text-navy-900 mb-3 group-hover:text-emerald-600 transition-colors">
-              Gestão Fiscal &amp; Contábil Completa
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed mb-6">
-              Apuração rigorosa de tributos, balancetes periódicos e compliance fiscal para blindar sua empresa contra autuações e recolhimentos indevidos.
-            </p>
-          </div>
-          <a href="#" data-wa-action="fiscal" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 group-hover:text-emerald-700 transition-colors pt-4 border-t border-slate-200">
-            <span>Solicitar proposta fiscal</span>
-            <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-          </a>
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- TAG SUPERIOR -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-tech-500/10 backdrop-blur-md border border-tech-500/30 text-tech-600 dark:text-tech-400 text-xs sm:text-sm font-semibold tracking-wide uppercase mb-6 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-tech-500 dark:bg-tech-400 animate-ping"></span>
+          ASSISTÊNCIA TÉCNICA AVANÇADA & TI CORPORATIVA EM SALVADOR E LAURO DE FREITAS
         </div>
 
-        <!-- Card 2: Assessoria Empresarial Estratégica -->
-        <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-7 card-hover flex flex-col justify-between group">
-          <div>
-            <div class="w-14 h-14 rounded-xl bg-navy-900 text-emerald-400 flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-colors shadow-sm">
-              <i data-lucide="pie-chart" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-bold font-heading text-navy-900 mb-3 group-hover:text-emerald-600 transition-colors">
-              Assessoria Empresarial Estratégica
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed mb-6">
-              Diagnóstico financeiro, planejamento tributário sob medida e inteligência de dados para tomada de decisões seguras e redução lícita de custos.
-            </p>
-          </div>
-          <a href="#" data-wa-action="estrategica" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 group-hover:text-emerald-700 transition-colors pt-4 border-t border-slate-200">
-            <span>Agendar diagnóstico</span>
-            <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-          </a>
-        </div>
-
-        <!-- Card 3: Departamento Pessoal & Trabalhista -->
-        <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-7 card-hover flex flex-col justify-between group">
-          <div>
-            <div class="w-14 h-14 rounded-xl bg-navy-900 text-emerald-400 flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-colors shadow-sm">
-              <i data-lucide="users" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-bold font-heading text-navy-900 mb-3 group-hover:text-emerald-600 transition-colors">
-              Departamento Pessoal &amp; Trabalhista
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed mb-6">
-              Gestão de folha de pagamento, férias, rescisões e eSocial conduzidos com segurança jurídica e zero risco de passivos trabalhistas.
-            </p>
-          </div>
-          <a href="#" data-wa-action="dp" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 group-hover:text-emerald-700 transition-colors pt-4 border-t border-slate-200">
-            <span>Falar sobre DP</span>
-            <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-          </a>
-        </div>
-
-        <!-- Card 4: Suporte MEI & Transição Empresarial -->
-        <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-7 card-hover flex flex-col justify-between group">
-          <div>
-            <div class="w-14 h-14 rounded-xl bg-navy-900 text-emerald-400 flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-colors shadow-sm">
-              <i data-lucide="rocket" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-bold font-heading text-navy-900 mb-3 group-hover:text-emerald-600 transition-colors">
-              Suporte MEI &amp; Transição Empresarial
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed mb-6">
-              Abertura simplificada, emissão de guias DAS, declarações anuais e migração estruturada para ME sem dores de cabeça ou surpresas com o Fisco.
-            </p>
-          </div>
-          <a href="#" data-wa-action="mei" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 group-hover:text-emerald-700 transition-colors pt-4 border-t border-slate-200">
-            <span>Migrar com segurança</span>
-            <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-          </a>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       4. SEÇÃO SOBRE NÓS
-       ========================================================================= -->
-  <section id="sobre" class="py-20 bg-slate-100 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Left Column: Visual/Stats Cards -->
-        <div class="lg:col-span-5 order-2 lg:order-1">
-          <div class="relative">
-            <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
-              <img 
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" 
-                alt="Arquitetura corporativa moderna Land Contabilidade" 
-                class="w-full h-72 object-cover"
-                loading="lazy"
-              >
-              <div class="p-6 sm:p-8 bg-navy-900 text-white">
-                <h4 class="text-lg font-bold font-heading mb-4 text-emerald-400">Por que escolher a Land?</h4>
-                <div class="space-y-4">
-                  <div class="flex items-start gap-3">
-                    <div class="p-1 rounded bg-emerald-500/20 text-emerald-400 mt-0.5">
-                      <i data-lucide="check" class="w-4 h-4"></i>
-                    </div>
-                    <p class="text-xs sm:text-sm text-slate-300">Auditoria fiscal preventiva que antecipa exigências da Receita Federal.</p>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <div class="p-1 rounded bg-emerald-500/20 text-emerald-400 mt-0.5">
-                      <i data-lucide="check" class="w-4 h-4"></i>
-                    </div>
-                    <p class="text-xs sm:text-sm text-slate-300">Plataforma digital integrada sem necessidade de papel físico.</p>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <div class="p-1 rounded bg-emerald-500/20 text-emerald-400 mt-0.5">
-                      <i data-lucide="check" class="w-4 h-4"></i>
-                    </div>
-                    <p class="text-xs sm:text-sm text-slate-300">Contador consultor dedicado ao seu nicho de atuação.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Trust Seal -->
-            <div class="absolute -bottom-5 -right-5 bg-white border border-slate-200 rounded-xl p-4 shadow-lg hidden sm:block">
-              <div class="flex items-center gap-3">
-                <i data-lucide="check-circle" class="w-8 h-8 text-emerald-500"></i>
-                <div>
-                  <div class="text-xs font-bold text-navy-900 uppercase">Segurança Total</div>
-                  <div class="text-[11px] text-slate-500">Certificação Digital &amp; LGPD</div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Right Column: Copy & Diferenciais -->
-        <div class="lg:col-span-7 order-1 lg:order-2">
-          <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-100">
-            QUEM SOMOS
+        <!-- HEADLINE H1 -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.18] mb-6 drop-shadow-sm dark:drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
+          Seu computador parou de funcionar ou sua empresa não pode ter paradas técnicas? 
+          <span class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-tech-600 via-sky-500 to-emerald-600 dark:from-tech-400 dark:via-sky-300 dark:to-emerald-400">
+            Nós resolvemos com rigor de laboratório.
           </span>
+        </h1>
 
-          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-navy-900 mt-4 mb-6 tracking-tight leading-tight">
-            Inteligência contábil orientada a resultados reais para a sua empresa
-          </h2>
+        <!-- SUB-HEADLINE -->
+        <p class="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-200 font-normal leading-relaxed max-w-3xl mx-auto mb-10 drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)]">
+          Diagnóstico preciso, recuperação de placas, upgrades de alto desempenho e contratos corporativos. Mais de 17 anos de excelência, atendimento em domicílio/delivery e garantia de até 12 meses.
+        </p>
 
-          <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
-            Não somos um escritório tradicional focado apenas em entregar guias de impostos. Atuamos como o braço estratégico do seu negócio, integrando processos digitais ágeis a uma consultoria próxima. Cuidamos das exigências do Fisco para que sua única preocupação seja vender e expandir.
-          </p>
-
-          <!-- Diferenciais com Checklist -->
-          <div class="space-y-6 mb-8">
-            
-            <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200/80 shadow-sm">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center shrink-0 mt-0.5">
-                <i data-lucide="check" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <h4 class="text-base font-bold font-heading text-navy-900 mb-1">Soluções Ágeis &amp; Digitais</h4>
-                <p class="text-sm text-slate-600">Operação sem papelada inútil, tudo integrado e acessível na palma da mão em tempo real.</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200/80 shadow-sm">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center shrink-0 mt-0.5">
-                <i data-lucide="check" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <h4 class="text-base font-bold font-heading text-navy-900 mb-1">Atendimento Humanizado</h4>
-                <p class="text-sm text-slate-600">Sem filas ou robôs genéricos; contato direto com quem entende os números da sua operação.</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200/80 shadow-sm">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center shrink-0 mt-0.5">
-                <i data-lucide="check" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <h4 class="text-base font-bold font-heading text-navy-900 mb-1">Segurança &amp; Precisão</h4>
-                <p class="text-sm text-slate-600">Conformidade contábil e fiscal rigorosa para sua tranquilidade e compliance total.</p>
-              </div>
-            </div>
-
+        <!-- CTAS DA DOBRA -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-4">
+          <div class="w-full sm:w-auto flex flex-col items-center">
+            <a href="https://wa.me/5571987564072?text=Ol%C3%A1%2C%20preciso%20de%20um%20diagn%C3%B3stico%20t%C3%A9cnico%20para%20o%20meu%20equipamento." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:-translate-y-0.5 transition-all duration-200">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+              <span>SOLICITAR DIAGNÓSTICO NO WHATSAPP</span>
+            </a>
+            <span class="text-xs text-slate-600 dark:text-slate-300 mt-2 flex items-center gap-1.5 font-medium drop-shadow-sm">
+              <i data-lucide="clock" class="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400"></i>
+              Resposta rápida em até 15 minutos em horário comercial
+            </span>
           </div>
 
-          <a href="#" data-wa-action="hero" target="_blank" class="inline-flex items-center gap-2 text-base font-bold text-navy-900 hover:text-emerald-600 transition-colors">
-            <span>Converse diretamente com nosso sócio consultor</span>
-            <i data-lucide="arrow-right" class="w-5 h-5 text-emerald-500"></i>
-          </a>
+          <div class="w-full sm:w-auto self-start sm:self-auto">
+            <a href="#para-empresas" 
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-white/90 dark:bg-slate-900/80 hover:bg-white dark:hover:bg-slate-800 text-slate-800 dark:text-white font-semibold text-base border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 shadow-sm backdrop-blur-md transition-all duration-200">
+              <i data-lucide="building-2" class="w-5 h-5 text-tech-500 dark:text-tech-400"></i>
+              <span>SOU EMPRESA (CONTRATOS DE TI)</span>
+            </a>
+          </div>
+        </div>
 
+        <!-- BADGES DE CONFIANÇA RÁPIDA -->
+        <div class="pt-8 border-t border-slate-200/80 dark:border-slate-800/80 mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto text-left">
+          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white/90 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-sm">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0"></i>
+            <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200">+17 Anos no Mercado Baiano</span>
+          </div>
+          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white/90 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-sm">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0"></i>
+            <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200">Laboratório Próprio Especializado</span>
+          </div>
+          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white/90 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-sm">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0"></i>
+            <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200">Garantia de até 12 Meses</span>
+          </div>
+          <div class="flex items-center gap-2.5 p-3 rounded-lg bg-white/90 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-sm">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0"></i>
+            <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200">Coleta & Entrega Segura</span>
+          </div>
         </div>
 
       </div>
+
     </div>
   </section>
 
-  <!-- =========================================================================
-       5. SEÇÃO PROCESSO DE TRABALHO (3 PASSOS)
-       ========================================================================= -->
-  <section id="processo" class="py-20 bg-white">
+
+  <!-- ======================================================
+       SEÇÃO 2: TRUST BAR (Métricas e Autoridade)
+       ====================================================== -->
+  <section class="border-y border-slate-200 dark:border-slate-800/80 bg-slate-100/60 dark:bg-dark-900/60 py-12 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header -->
+      <!-- MÉTRICAS -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pb-10 border-b border-slate-200 dark:border-slate-800/70">
+        <div class="text-center p-4">
+          <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-tech-600 to-emerald-600 dark:from-tech-400 dark:to-emerald-400 mb-1">
+            +17 Anos
+          </div>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">De experiência técnica contínua</p>
+        </div>
+
+        <div class="text-center p-4">
+          <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-tech-600 to-emerald-600 dark:from-tech-400 dark:to-emerald-400 mb-1">
+            +15.000
+          </div>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">Equipamentos e placas recuperados</p>
+        </div>
+
+        <div class="text-center p-4">
+          <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-tech-600 to-emerald-600 dark:from-tech-400 dark:to-emerald-400 mb-1">
+            Até 12 Meses
+          </div>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">De garantia documentada</p>
+        </div>
+
+        <div class="text-center p-4">
+          <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-tech-600 to-emerald-600 dark:from-tech-400 dark:to-emerald-400 mb-1">
+            2 Unidades
+          </div>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">Físicas (Salvador e Lauro de Freitas)</p>
+        </div>
+      </div>
+
+      <!-- TEXTO DE SUPORTE E LOGOS MULTIMARCAS -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 font-semibold flex items-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-tech-500 dark:text-tech-400"></i>
+          <span>Especialistas multimarcas:</span>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-slate-500 dark:text-slate-400 font-semibold tracking-wider text-sm sm:text-base">
+          <span class="hover:text-slate-900 dark:hover:text-white transition-colors">DELL</span>
+          <span class="hover:text-slate-900 dark:hover:text-white transition-colors">APPLE</span>
+          <span class="hover:text-slate-900 dark:hover:text-white transition-colors">LENOVO</span>
+          <span class="hover:text-slate-900 dark:hover:text-white transition-colors">ASUS</span>
+          <span class="hover:text-slate-900 dark:hover:text-white transition-colors">HP</span>
+          <span class="hover:text-slate-900 dark:hover:text-white transition-colors">ACER</span>
+          <span class="hover:text-slate-900 dark:hover:text-white transition-colors">SAMSUNG</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       SEÇÃO 3: BIFURCAÇÃO ESTRATÉGICA (Direcionamento de Funil)
+       ====================================================== -->
+  <section class="py-20 md:py-28 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-100">
-          COMO FUNCIONA
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-navy-900 mt-4 mb-4 tracking-tight">
-          Do diagnóstico à rotina: veja como assumimos sua gestão
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-tech-500/10 border border-tech-500/25 text-tech-600 dark:text-tech-400 text-xs font-semibold tracking-wide uppercase mb-3">
+          DIRECIONAMENTO INTELIGENTE
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Qual é a sua necessidade imediata?
         </h2>
-        <p class="text-base sm:text-lg text-slate-600">
-          Um método estruturado em três etapas que garante transição transparente, sem interrupção nas suas vendas.
+        <p class="text-slate-600 dark:text-slate-400 text-base sm:text-lg mt-3">
+          Escolha a sua modalidade de atendimento para receber a solução adequada.
         </p>
       </div>
 
-      <!-- 3 Steps Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
         
-        <!-- Connecting Line for desktop -->
-        <div class="hidden md:block absolute top-1/2 left-1/6 right-1/6 h-0.5 bg-gradient-to-r from-emerald-200 via-emerald-400 to-emerald-200 -translate-y-12 z-0"></div>
+        <!-- CARD A - PESSOA FÍSICA & PROFISSIONAL LIBERAL -->
+        <div id="para-voce" class="gradient-border rounded-2xl p-8 sm:p-10 flex flex-col justify-between hover:shadow-2xl hover:shadow-tech-500/10 transition-all duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-xl bg-tech-500/10 border border-tech-500/20 flex items-center justify-center text-tech-500 dark:text-tech-400">
+                <i data-lucide="laptop" class="w-7 h-7"></i>
+              </div>
+              <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-tech-600 dark:text-tech-400 border border-slate-200 dark:border-slate-700">
+                B2C / Setup Pessoal
+              </span>
+            </div>
 
-        <!-- Passo 01 -->
-        <div class="relative z-10 bg-slate-50 border border-slate-200/80 rounded-2xl p-8 text-center flex flex-col items-center card-hover">
-          <div class="w-16 h-16 rounded-2xl bg-navy-900 text-emerald-400 font-extrabold text-xl flex items-center justify-center mb-6 shadow-md border-2 border-emerald-500/30">
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Para Você e seu Setup</h3>
+            <p class="text-tech-600 dark:text-tech-400 text-sm font-medium mb-6">Foco: Agilidade e preservação de dados</p>
+
+            <ul class="space-y-4 text-slate-600 dark:text-slate-300 text-sm sm:text-base mb-8">
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i>
+                <span>Conserto e manutenção de notebooks e MacBooks</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i>
+                <span>Recuperação eletrônica de placas-mãe (evite trocar a máquina inteira)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i>
+                <span>Upgrades rápidos de SSD e Memória RAM para multiplicar a velocidade</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i>
+                <span>Montagem de computadores sob medida (Gamer, Criação e Escritório)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i>
+                <span>Atendimento via Delivery / Retirada no seu endereço</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <a href="https://wa.me/5571987564072?text=Ol%C3%A1%2C%20preciso%20de%20suporte%20t%C3%A9cnico%20para%20o%20meu%20computador%20ou%20notebook." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-tech-500 hover:bg-tech-600 text-white font-bold text-sm sm:text-base shadow-lg shadow-tech-500/20 hover:shadow-tech-500/35 transition-all duration-200">
+              <i data-lucide="wrench" class="w-5 h-5"></i>
+              <span>RECUPERAR MEU EQUIPAMENTO</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD B - EMPRESAS & INFRAESTRUTURA -->
+        <div id="para-empresas" class="gradient-border rounded-2xl p-8 sm:p-10 flex flex-col justify-between hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500 dark:text-emerald-400">
+                <i data-lucide="shield-check" class="w-7 h-7"></i>
+              </div>
+              <span class="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30">
+                B2B / Corporativo
+              </span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Para sua Empresa (B2B)</h3>
+            <p class="text-emerald-600 dark:text-emerald-400 text-sm font-medium mb-6">Foco: Zero perda de faturamento por falhas de TI</p>
+
+            <ul class="space-y-4 text-slate-600 dark:text-slate-300 text-sm sm:text-base mb-8">
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i>
+                <span>Contratos mensais de suporte preventivo e corretivo (Helpdesk)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i>
+                <span>Gestão de servidores, rotinas de backup automático e redes corporativas</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i>
+                <span>Manutenção programada de frotas e parques de máquinas</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i>
+                <span>Redução drástica de chamados parados e perda de produtividade</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i>
+                <span>Atendimento presencial prioritário com SLA contratual</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <a href="https://wa.me/5571987564072?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20consultoria%20e%20contrato%20de%20TI%20para%20minha%20empresa." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm sm:text-base shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/35 transition-all duration-200">
+              <i data-lucide="briefcase" class="w-5 h-5"></i>
+              <span>SOLICITAR CONSULTORIA CORPORATIVA</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       SEÇÃO 4: GRADE DE SERVIÇOS TÉCNICOS (Especialidades de Bancada)
+       ====================================================== -->
+  <section id="laboratorio" class="py-20 md:py-28 bg-slate-100/40 dark:bg-dark-900/40 border-y border-slate-200 dark:border-slate-800/80 relative transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-tech-500/10 border border-tech-500/25 text-tech-600 dark:text-tech-400 text-xs font-semibold tracking-wide uppercase mb-3">
+          NOSSO LABORATÓRIO
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Engenharia e precisão para qualquer defeito.
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-base sm:text-lg mt-3">
+          Equipamentos avançados de medição, diagnóstico microscópico e equipe sênior dedicada.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        
+        <!-- SERVIÇO 1 -->
+        <div class="gradient-border rounded-2xl p-7 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-tech-500/15 border border-tech-500/30 flex items-center justify-center text-tech-500 dark:text-tech-400 mb-5">
+              <i data-lucide="microchip" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Reparo Avançado de Placa-Mãe</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Enquanto a maioria das assistências condena seu aparelho ou exige uma placa nova com preço abusivo, nosso laboratório realiza microsoldagem BGA e troca de componentes com microscopia óptica. Economize até 70% do valor de um equipamento novo.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/70 flex items-center gap-2 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+            <i data-lucide="trending-down" class="w-4 h-4"></i>
+            <span>Economia de até 70% vs placa nova</span>
+          </div>
+        </div>
+
+        <!-- SERVIÇO 2 -->
+        <div class="gradient-border rounded-2xl p-7 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-5">
+              <i data-lucide="monitor" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Manutenção Completa de Notebooks e MacBooks</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Reparo de carcaças quebradas, troca de telas, substituição de teclados, desoxidação após contato com líquidos e limpeza térmica profunda com pastas térmicas premium.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/70 flex items-center gap-2 text-xs font-semibold text-tech-600 dark:text-tech-400">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span>Peças homologadas & garantia técnica</span>
+          </div>
+        </div>
+
+        <!-- SERVIÇO 3 -->
+        <div class="gradient-border rounded-2xl p-7 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-600 dark:text-purple-400 mb-5">
+              <i data-lucide="zap" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Upgrades & Rejuvenescimento de PCs</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Seu computador está lento, travando ou demorando para iniciar? Multiplique o desempenho instalando SSD NVMe de alta velocidade e expansão de memória com clonagem de sistema sem perda de arquivos.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/70 flex items-center gap-2 text-xs font-semibold text-purple-600 dark:text-purple-400">
+            <i data-lucide="hard-drive" class="w-4 h-4"></i>
+            <span>Clonagem 100% segura sem perder nada</span>
+          </div>
+        </div>
+
+        <!-- SERVIÇO 4 -->
+        <div class="gradient-border rounded-2xl p-7 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-sky-500/15 border border-sky-500/30 flex items-center justify-center text-sky-600 dark:text-sky-400 mb-5">
+              <i data-lucide="sliders" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Montagem & Otimização de Computadores</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Montagem estruturada (cable management de alto padrão), escolha equilibrada de hardware para evitar gargalos térmicos e de performance. Máquinas para escritório, workstations de engenharia/design e PCs Gamers.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/70 flex items-center gap-2 text-xs font-semibold text-sky-600 dark:text-sky-400">
+            <i data-lucide="flame" class="w-4 h-4"></i>
+            <span>Zero gargalos e fluxo térmico perfeito</span>
+          </div>
+        </div>
+
+        <!-- SERVIÇO 5 -->
+        <div class="gradient-border rounded-2xl p-7 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 md:col-span-2 lg:col-span-2">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-600 dark:text-amber-400 mb-5">
+              <i data-lucide="network" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Consultoria, Redes e Infraestrutura</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Instalação estruturada de cabeamento, Wi-Fi corporativo de alta densidade sem pontos cegos e proteção de perímetro digital para clínicas e escritórios. Segurança contra ataques e perdas de conexão que interrompem sua empresa.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/70 flex items-center gap-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
+            <i data-lucide="shield" class="w-4 h-4"></i>
+            <span>Alta disponibilidade e segurança corporativa</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA DA SEÇÃO -->
+      <div class="mt-14 text-center">
+        <a href="https://wa.me/5571987564072?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20t%C3%A9cnico%20de%20bancada%20da%20Gigatech." 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base shadow-xl shadow-emerald-500/20 hover:shadow-emerald-500/35 transition-all duration-200">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>FALAR COM UM TÉCNICO AGORA</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       SEÇÃO 5: MÉTODO OPERACIONAL (Como Funciona)
+       ====================================================== -->
+  <section class="py-20 md:py-28 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-tech-500/10 border border-tech-500/25 text-tech-600 dark:text-tech-400 text-xs font-semibold tracking-wide uppercase mb-3">
+          PROCESSO TRANSPARENTE
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          4 Etapas simples para o seu computador voltar a render 100%.
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-base sm:text-lg mt-3">
+          Sem surpresas no orçamento, sem termos incompreensíveis e com total rastreabilidade.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+        
+        <!-- PASSO 1 -->
+        <div class="bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 relative flex flex-col justify-between group hover:border-tech-500/40 shadow-sm transition-colors">
+          <div class="text-4xl font-extrabold text-slate-300 dark:text-slate-700 group-hover:text-tech-500 dark:group-hover:text-tech-400 transition-colors mb-4">
             01
           </div>
-          <h3 class="text-xl font-bold font-heading text-navy-900 mb-3">
-            Raio-X Operacional
-          </h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Analisamos o momento atual da sua empresa, identificamos gargalos tributários e mapeamos riscos fiscais imediatos.
-          </p>
-          <div class="mt-6 pt-4 border-t border-slate-200 w-full text-xs font-semibold text-emerald-600 flex items-center justify-center gap-1.5">
-            <i data-lucide="search" class="w-4 h-4"></i>
-            <span>Diagnóstico Gratuito</span>
+          <div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Contato & Coleta</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              Você fala conosco pelo WhatsApp, agenda a entrega na bancada ou nós retiramos seu equipamento com protocolo formal de segurança no seu endereço.
+            </p>
           </div>
         </div>
 
-        <!-- Passo 02 -->
-        <div class="relative z-10 bg-slate-50 border border-slate-200/80 rounded-2xl p-8 text-center flex flex-col items-center card-hover">
-          <div class="w-16 h-16 rounded-2xl bg-emerald-500 text-white font-extrabold text-xl flex items-center justify-center mb-6 shadow-md glow-emerald">
+        <!-- PASSO 2 -->
+        <div class="bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 relative flex flex-col justify-between group hover:border-tech-500/40 shadow-sm transition-colors">
+          <div class="text-4xl font-extrabold text-slate-300 dark:text-slate-700 group-hover:text-tech-500 dark:group-hover:text-tech-400 transition-colors mb-4">
             02
           </div>
-          <h3 class="text-xl font-bold font-heading text-navy-900 mb-3">
-            Estruturação &amp; Enquadramento
-          </h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Definimos o regime tributário mais econômico (Simples Nacional, Lucro Presumido ou Real) e organizamos todo o fluxo contábil.
-          </p>
-          <div class="mt-6 pt-4 border-t border-slate-200 w-full text-xs font-semibold text-emerald-600 flex items-center justify-center gap-1.5">
-            <i data-lucide="sliders" class="w-4 h-4"></i>
-            <span>Planejamento Otimizado</span>
+          <div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Diagnóstico Técnico</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              Nossos técnicos avaliam a máquina em bancada e apresentam um laudo claro, sem jargões técnicos complexos e sem "empurrar" peças desnecessárias.
+            </p>
           </div>
         </div>
 
-        <!-- Passo 03 -->
-        <div class="relative z-10 bg-slate-50 border border-slate-200/80 rounded-2xl p-8 text-center flex flex-col items-center card-hover">
-          <div class="w-16 h-16 rounded-2xl bg-navy-900 text-emerald-400 font-extrabold text-xl flex items-center justify-center mb-6 shadow-md border-2 border-emerald-500/30">
+        <!-- PASSO 3 -->
+        <div class="bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 relative flex flex-col justify-between group hover:border-tech-500/40 shadow-sm transition-colors">
+          <div class="text-4xl font-extrabold text-slate-300 dark:text-slate-700 group-hover:text-tech-500 dark:group-hover:text-tech-400 transition-colors mb-4">
             03
           </div>
-          <h3 class="text-xl font-bold font-heading text-navy-900 mb-3">
-            Gestão Contínua &amp; Suporte
-          </h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Nossa equipe executa todas as rotinas, entrega relatórios mensais claros e orienta suas decisões de forma preventiva.
-          </p>
-          <div class="mt-6 pt-4 border-t border-slate-200 w-full text-xs font-semibold text-emerald-600 flex items-center justify-center gap-1.5">
-            <i data-lucide="headphones" class="w-4 h-4"></i>
-            <span>Acompanhamento Próximo</span>
+          <div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Aprovação & Execução</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              Nenhum serviço é iniciado sem o seu aceite expresso do orçamento. Trabalhamos com componentes originais e peças testadas.
+            </p>
+          </div>
+        </div>
+
+        <!-- PASSO 4 -->
+        <div class="bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 relative flex flex-col justify-between group hover:border-tech-500/40 shadow-sm transition-colors">
+          <div class="text-4xl font-extrabold text-slate-300 dark:text-slate-700 group-hover:text-tech-500 dark:group-hover:text-tech-400 transition-colors mb-4">
+            04
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Testes & Entrega com Garantia</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              O equipamento passa por testes de estresse antes de ser devolvido com certificado de garantia de 3, 6 ou 12 meses.
+            </p>
           </div>
         </div>
 
       </div>
 
-      <!-- CTA In-Section -->
-      <div class="mt-12 text-center">
-        <a href="#" data-wa-action="hero" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl text-base font-bold text-white bg-navy-900 hover:bg-navy-800 transition-all shadow-md">
-          <i data-lucide="phone-call" class="w-5 h-5 text-emerald-400"></i>
-          <span>Quero iniciar o Passo 01 agora</span>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       SEÇÃO 6: PROVA SOCIAL & DEPOIMENTOS (Credibilidade Real)
+       ====================================================== -->
+  <section class="py-20 md:py-28 bg-slate-100/40 dark:bg-dark-900/50 border-y border-slate-200 dark:border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-700 dark:text-emerald-400 text-xs font-semibold tracking-wide uppercase mb-3">
+          AVALIAÇÕES REAIS
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Quem confia na Gigatech não troca.
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-base sm:text-lg mt-3">
+          Veja a experiência de quem teve seu problema solucionado com rapidez e transparência.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+        
+        <!-- CARD AVALIAÇÃO 1 -->
+        <div class="bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-7 flex flex-col justify-between shadow-sm hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed italic mb-6">
+              "Meu notebook de trabalho quebrou a dobradiça e a carcaça. Praticamente deram como perdido em outro lugar. A equipe da Gigatech buscou aqui em Lauro de Freitas, fez a restauração estrutural perfeita e me entregou funcionando perfeitamente em 48h."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-tech-500/20 text-tech-600 dark:text-tech-400 flex items-center justify-center font-bold text-sm">
+              RM
+            </div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 dark:text-white">Roberto M.</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400">Advogado – Lauro de Freitas</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD AVALIAÇÃO 2 -->
+        <div class="bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-7 flex flex-col justify-between shadow-sm hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed italic mb-6">
+              "Contratamos a Gigatech para cuidar dos 25 computadores do nosso escritório. O tempo de resposta quando alguém tem problema caiu para quase zero. Finalmente temos um suporte de TI profissional que não nos deixa na mão."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-sm">
+              MS
+            </div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 dark:text-white">Mariana Silveira</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400">Gerente Administrativa – Salvador</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD AVALIAÇÃO 3 -->
+        <div class="bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-7 flex flex-col justify-between shadow-sm hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed italic mb-6">
+              "Minha placa-mãe entrou em curto e não ligava nada. Conseguiram recuperar a placa por uma fração do preço de comprar outro notebook. Profissionais honestos e transparentes."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-sky-500/20 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-sm">
+              CE
+            </div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 dark:text-white">Carlos Eduardo</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400">Designer – Salvador</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BOX DE DESTAQUE GOOGLE REVIEWS -->
+      <div class="max-w-xl mx-auto rounded-2xl p-4 sm:p-5 bg-white dark:bg-gradient-to-r dark:from-slate-900 dark:via-slate-800/80 dark:to-slate-900 border border-slate-200 dark:border-slate-700 flex flex-col sm:flex-row items-center justify-center gap-3 text-center sm:text-left shadow-md">
+        <div class="flex items-center gap-1 text-amber-400">
+          <span class="text-xl font-extrabold text-slate-900 dark:text-white mr-1.5">4.9</span>
+          <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+        </div>
+        <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium">
+          <span class="text-slate-900 dark:text-white font-semibold">Google Reviews</span> | Avaliações verificadas de clientes de Salvador e região.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       SEÇÃO 7: ENDEREÇOS FÍSICOS & LOGÍSTICA
+       ====================================================== -->
+  <section id="unidades" class="py-20 md:py-28 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-tech-500/10 border border-tech-500/25 text-tech-600 dark:text-tech-400 text-xs font-semibold tracking-wide uppercase mb-3">
+          PRESENÇA FÍSICA
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Duas unidades preparadas para receber você.
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-base sm:text-lg mt-3">
+          Atendimento presencial com laboratório próprio em Salvador e unidade corporativa em Lauro de Freitas.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+        
+        <!-- UNIDADE SALVADOR -->
+        <div class="bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-7 sm:p-8 flex flex-col justify-between shadow-sm hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-lg bg-tech-500/15 text-tech-600 dark:text-tech-400 flex items-center justify-center">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Unidade Salvador</h3>
+            </div>
+
+            <div class="space-y-2 text-slate-600 dark:text-slate-300 text-sm mb-6">
+              <p><strong class="text-slate-800 dark:text-slate-200">Bairro:</strong> Jardim das Margaridas</p>
+              <p><strong class="text-slate-800 dark:text-slate-200">Endereço:</strong> Travessa Acalanto, 507 – Salvador / BA</p>
+              <p><strong class="text-slate-800 dark:text-slate-200">Serviços:</strong> Laboratório de Reparos Avançados, Coleta Expressa e Delivery</p>
+            </div>
+          </div>
+
+          <a href="https://maps.google.com/?q=Travessa+Acalanto+507+Jardim+das+Margaridas+Salvador+BA" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-white font-semibold text-sm border border-slate-300 dark:border-slate-700 transition-colors">
+            <i data-lucide="map" class="w-4 h-4 text-tech-600 dark:text-tech-400"></i>
+            <span>VER NO GOOGLE MAPS</span>
+          </a>
+        </div>
+
+        <!-- UNIDADE LAURO DE FREITAS -->
+        <div class="bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-7 sm:p-8 flex flex-col justify-between shadow-sm hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Unidade Lauro de Freitas</h3>
+            </div>
+
+            <div class="space-y-2 text-slate-600 dark:text-slate-300 text-sm mb-6">
+              <p><strong class="text-slate-800 dark:text-slate-200">Bairro:</strong> Centro</p>
+              <p><strong class="text-slate-800 dark:text-slate-200">Endereço:</strong> Rua Ernesto dos Santos, 208 – Edifício AA Center – Lauro de Freitas / BA</p>
+              <p><strong class="text-slate-800 dark:text-slate-200">Serviços:</strong> Atendimento Comercial, Consultoria Corporativa e Recebimento Técnico</p>
+            </div>
+          </div>
+
+          <a href="https://maps.google.com/?q=Rua+Ernesto+dos+Santos+208+Centro+Lauro+de+Freitas+BA" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-white font-semibold text-sm border border-slate-300 dark:border-slate-700 transition-colors">
+            <i data-lucide="map" class="w-4 h-4 text-emerald-600 dark:text-emerald-400"></i>
+            <span>VER NO GOOGLE MAPS</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- BOX INFORMATIVO / LOGÍSTICA -->
+      <div class="rounded-2xl p-6 sm:p-8 bg-gradient-to-r from-sky-50 via-slate-50 to-emerald-50 dark:from-tech-950 dark:via-slate-900 dark:to-tech-950 border border-tech-500/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-tech-500/20 border border-tech-500/30 flex items-center justify-center text-tech-600 dark:text-tech-400 shrink-0">
+            <i data-lucide="truck" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Não pode vir até nós? Não perca tempo no trânsito.</h4>
+            <p class="text-slate-600 dark:text-slate-300 text-sm">
+              Solicite nosso serviço de <strong>Coleta & Entrega Segura</strong> direto no seu condomínio, residência ou empresa com termo formal de protocolo.
+            </p>
+          </div>
+        </div>
+        <a href="https://wa.me/5571987564072?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20coleta%2Fdelivery%20para%20o%20meu%20equipamento." 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="whitespace-nowrap inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-tech-500 hover:bg-tech-600 text-white font-bold text-sm shadow-md transition-colors">
+          <span>AGENDAR COLETA DELIVERY</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
       </div>
 
     </div>
   </section>
 
-  <!-- =========================================================================
-       6. SEÇÃO SEGMENTOS ATENDIDOS
-       ========================================================================= -->
-  <section id="segmentos" class="py-20 bg-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-100">
-          EXPERIÊNCIA SETORIAL
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-navy-900 mt-4 mb-4 tracking-tight">
-          Soluções contábeis moldadas para a realidade do seu setor
-        </h2>
-        <p class="text-base sm:text-lg text-slate-600">
-          Cada nicho possui particularidades tributárias e regulatórias específicas. Veja como adequamos nossa expertise ao seu mercado:
-        </p>
-      </div>
 
-      <!-- 6 Segments Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- Segmento 1: Saúde & Clínicas -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 card-hover group">
-          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-5 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
-            <i data-lucide="stethoscope" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-lg font-bold font-heading text-navy-900 mb-2">Saúde &amp; Clínicas</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Gestão do Fator R, redução legal de impostos para médicos e organização contábil de consultórios e clínicas de saúde.
-          </p>
-        </div>
-
-        <!-- Segmento 2: Prestadores de Serviços -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 card-hover group">
-          <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-            <i data-lucide="laptop" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-lg font-bold font-heading text-navy-900 mb-2">Prestadores de Serviços</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Emissão rápida de notas fiscais, enquadramento simplificado no Simples Nacional e assessoria contratual preventiva.
-          </p>
-        </div>
-
-        <!-- Segmento 3: Comércio & Varejo -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 card-hover group">
-          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-5 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
-            <i data-lucide="shopping-bag" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-lg font-bold font-heading text-navy-900 mb-2">Comércio &amp; Varejo</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Controle apurado de ICMS, conciliação de entradas e saídas de mercadorias e conformidade fiscal sem riscos de bitributação.
-          </p>
-        </div>
-
-        <!-- Segmento 4: Condomínios -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 card-hover group">
-          <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-            <i data-lucide="building-2" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-lg font-bold font-heading text-navy-900 mb-2">Condomínios</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Rigor e transparência absoluta na prestação de contas aos moradores, balancetes digitais e suporte direto ao síndico.
-          </p>
-        </div>
-
-        <!-- Segmento 5: Agronegócio -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 card-hover group">
-          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-5 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
-            <i data-lucide="sprout" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-lg font-bold font-heading text-navy-900 mb-2">Agronegócio</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Gestão de ITR, declarações específicas do produtor rural, livro caixa digital e assessoria tributária para o agronegócio.
-          </p>
-        </div>
-
-        <!-- Segmento 6: Microempreendedor (MEI) -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 card-hover group">
-          <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-            <i data-lucide="trending-up" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-lg font-bold font-heading text-navy-900 mb-2">Microempreendedor (MEI)</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Regularização de pendências cadastrais, declaração DASN-SIMEI e migração assistida para Microempresa (ME) no momento certo.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       7. SEÇÃO FAQ (ACCORDION INTERATIVO)
-       ========================================================================= -->
-  <section id="faq" class="py-20 bg-white">
+  <!-- ======================================================
+       SEÇÃO 8: FAQ (Quebra de Objeções)
+       ====================================================== -->
+  <section id="faq" class="py-20 md:py-28 bg-slate-100/40 dark:bg-dark-900/50 border-y border-slate-200 dark:border-slate-800/80 transition-colors">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header -->
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-100">
-          PERGUNTAS FREQUENTES
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-navy-900 mt-4 mb-4 tracking-tight">
-          Tire suas dúvidas antes de dar o próximo passo
+      <div class="text-center mb-14">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-tech-500/10 border border-tech-500/25 text-tech-600 dark:text-tech-400 text-xs font-semibold tracking-wide uppercase mb-3">
+          TIROU SUAS DÚVIDAS?
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Perguntas Frequentes
         </h2>
-        <p class="text-base text-slate-600">
-          Transparência em primeiro lugar. Veja as respostas para as principais dúvidas de quem busca nossa assessoria:
+        <p class="text-slate-600 dark:text-slate-400 text-base sm:text-lg mt-3">
+          Transparência total em cada etapa do seu atendimento.
         </p>
       </div>
 
-      <!-- FAQ Accordion List -->
       <div class="space-y-4">
         
-        <!-- FAQ 1 -->
-        <div class="faq-item border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
-          <button type="button" class="faq-header w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-base sm:text-lg text-navy-900 hover:text-emerald-600 transition-colors">
-            <span>Quanto tempo leva para abrir uma empresa?</span>
+        <!-- PERGUNTA 1 -->
+        <div class="faq-item bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm transition-colors">
+          <button type="button" class="faq-question w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Quanto tempo leva para sair o diagnóstico?</span>
             <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300"></i>
           </button>
-          <div class="faq-content px-6 pb-5 text-sm sm:text-base text-slate-600 leading-relaxed">
-            Em média, entre <strong>3 a 10 dias úteis</strong> após a entrega dos documentos, dependendo da cidade e dos órgãos de registro (Junta Comercial, Receita Federal e Prefeitura). Cuidamos de todo o trâmite digital para máxima agilidade.
+          <div class="faq-answer hidden px-5 sm:px-6 pb-6 pt-1 text-slate-600 dark:text-slate-300 text-sm leading-relaxed border-t border-slate-100 dark:border-slate-800/50">
+            A maioria dos diagnósticos de computadores e notebooks é realizada entre 24h e 48h úteis após o recebimento em nosso laboratório. Para empresas com contrato, o atendimento segue o SLA imediato estabelecido.
           </div>
         </div>
 
-        <!-- FAQ 2 -->
-        <div class="faq-item border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
-          <button type="button" class="faq-header w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-base sm:text-lg text-navy-900 hover:text-emerald-600 transition-colors">
-            <span>Quais documentos são necessários para a abertura?</span>
+        <!-- PERGUNTA 2 -->
+        <div class="faq-item bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm transition-colors">
+          <button type="button" class="faq-question w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Como funciona o serviço de coleta e entrega?</span>
             <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300"></i>
           </button>
-          <div class="faq-content px-6 pb-5 text-sm sm:text-base text-slate-600 leading-relaxed">
-            Documento de identidade oficial com foto (RG ou CNH), comprovante de residência atualizado, certidão de estado civil e carnê do IPTU do imóvel de registro (ou consulta de viabilidade para endereço virtual).
+          <div class="faq-answer hidden px-5 sm:px-6 pb-6 pt-1 text-slate-600 dark:text-slate-300 text-sm leading-relaxed border-t border-slate-100 dark:border-slate-800/50">
+            Nossos técnicos agendam um horário conveniente para você. O equipamento é recolhido mediante emissão de comprovante/termo de recebimento detalhado, garantindo 100% de segurança dos seus bens.
           </div>
         </div>
 
-        <!-- FAQ 3 -->
-        <div class="faq-item border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
-          <button type="button" class="faq-header w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-base sm:text-lg text-navy-900 hover:text-emerald-600 transition-colors">
-            <span>Posso registrar a empresa no meu endereço residencial?</span>
+        <!-- PERGUNTA 3 -->
+        <div class="faq-item bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm transition-colors">
+          <button type="button" class="faq-question w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">O orçamento é cobrado?</span>
             <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300"></i>
           </button>
-          <div class="faq-content px-6 pb-5 text-sm sm:text-base text-slate-600 leading-relaxed">
-            <strong>Sim</strong>, para a grande maioria dos prestadores de serviços, profissionais autônomos e atividades sem atendimento presencial ao público. Realizamos a análise prévia de viabilidade no plano diretor do seu município antes de protocolar.
+          <div class="faq-answer hidden px-5 sm:px-6 pb-6 pt-1 text-slate-600 dark:text-slate-300 text-sm leading-relaxed border-t border-slate-100 dark:border-slate-800/50">
+            Nosso orçamento padrão para bancada é gratuito e sem compromisso. Só iniciamos o serviço após a sua expressa aprovação dos valores.
           </div>
         </div>
 
-        <!-- FAQ 4 -->
-        <div class="faq-item border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
-          <button type="button" class="faq-header w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-base sm:text-lg text-navy-900 hover:text-emerald-600 transition-colors">
-            <span>Quando devo migrar de MEI para ME?</span>
+        <!-- PERGUNTA 4 -->
+        <div class="faq-item bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm transition-colors">
+          <button type="button" class="faq-question w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Qual a garantia dos serviços prestados?</span>
             <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300"></i>
           </button>
-          <div class="faq-content px-6 pb-5 text-sm sm:text-base text-slate-600 leading-relaxed">
-            Assim que estiver próximo do limite de faturamento anual permitido para MEI, ou quando sua operação demandar a contratação de mais de 1 funcionário, entrada de sócios ou emissão de notas em faixas maiores, prevenindo multas e desenquadramentos retroativos severos.
+          <div class="faq-answer hidden px-5 sm:px-6 pb-6 pt-1 text-slate-600 dark:text-slate-300 text-sm leading-relaxed border-t border-slate-100 dark:border-slate-800/50">
+            Dependendo da categoria do serviço e das peças aplicadas, fornecemos termos formais de garantia de 3, 6 ou até 12 meses.
+          </div>
+        </div>
+
+        <!-- PERGUNTA 5 -->
+        <div class="faq-item bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm transition-colors">
+          <button type="button" class="faq-question w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Como funcionam os contratos de TI para empresas?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-answer hidden px-5 sm:px-6 pb-6 pt-1 text-slate-600 dark:text-slate-300 text-sm leading-relaxed border-t border-slate-100 dark:border-slate-800/50">
+            Fazemos um diagnóstico inicial do seu parque tecnológico (máquinas, rede, servidores, segurança) e desenhamos um plano mensal fixo, incluindo suporte preventivo, corretivo e helpdesk para os colaboradores.
           </div>
         </div>
 
@@ -716,211 +927,195 @@
     </div>
   </section>
 
-  <!-- =========================================================================
-       8. BANNER CTA FINAL
-       ========================================================================= -->
-  <section class="py-20 bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 text-white relative overflow-hidden">
-    <!-- Glow element -->
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/15 via-transparent to-transparent"></div>
 
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-semibold mb-6">
-        <i data-lucide="sparkles" class="w-4 h-4"></i>
-        ATENDIMENTO RÁPIDO &amp; CONSULTORIA DEDICADA
-      </div>
-
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading mb-6 tracking-tight">
-        Pronto para ter uma contabilidade que joga no seu time?
-      </h2>
-
-      <p class="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-        Converse com nossos especialistas, tire suas dúvidas e receba um diagnóstico tributário sob medida para pagar o mínimo legal de impostos.
-      </p>
-
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#" data-wa-action="final" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-bold text-white bg-emerald-500 hover:bg-emerald-600 glow-emerald transition-all transform hover:-translate-y-0.5">
-          <i data-lucide="message-circle" class="w-5 h-5"></i>
-          <span>Chamar no WhatsApp</span>
-        </a>
-
-        <button type="button" data-open-modal class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold text-white bg-white/10 hover:bg-white/15 border border-white/20 backdrop-blur-sm transition-all">
-          <i data-lucide="mail" class="w-5 h-5 text-emerald-400"></i>
-          <span>Solicitar Contato</span>
-        </button>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       FOOTER
-       ========================================================================= -->
-  <footer id="contato" class="bg-navy-900 text-slate-400 pt-16 pb-12 border-t border-navy-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-12">
-        
-        <!-- Company Info -->
-        <div class="lg:col-span-5">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center text-white">
-              <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
-            </div>
-            <span class="text-xl font-bold text-white font-heading">LAND CONTABILIDADE</span>
-          </div>
-          <p class="text-sm text-slate-400 leading-relaxed mb-6 max-w-sm">
-            Contabilidade consultiva e digital de alta performance. Assumimos suas rotinas fiscais, tributárias e trabalhistas para que sua empresa alcance a máxima lucratividade.
+  <!-- ======================================================
+       SEÇÃO 9: BANNER DE CONVERSÃO FINAL (Bottom Hero)
+       ====================================================== -->
+  <section class="py-20 md:py-28 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="gradient-border rounded-3xl p-8 sm:p-12 lg:p-14 shadow-2xl relative">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+            Não deixe seu equipamento ou sua operação parados por mais um dia.
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
+            Fale agora mesmo com nosso laboratório técnico e receba a melhor orientação para o seu caso.
           </p>
-          <div class="flex items-center gap-4">
-            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-navy-800 hover:bg-emerald-500 hover:text-white flex items-center justify-center text-slate-300 transition-colors" aria-label="Instagram">
-              <i data-lucide="instagram" class="w-4 h-4"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-navy-800 hover:bg-emerald-500 hover:text-white flex items-center justify-center text-slate-300 transition-colors" aria-label="LinkedIn">
-              <i data-lucide="linkedin" class="w-4 h-4"></i>
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-navy-800 hover:bg-emerald-500 hover:text-white flex items-center justify-center text-slate-300 transition-colors" aria-label="Facebook">
-              <i data-lucide="facebook" class="w-4 h-4"></i>
-            </a>
+        </div>
+
+        <!-- FORMULÁRIO SIMPLIFICADO -->
+        <form id="lead-form" class="max-w-xl mx-auto space-y-4">
+          <div>
+            <label for="lead-name" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+              Nome Completo
+            </label>
+            <input type="text" id="lead-name" required placeholder="Digite seu nome completo" 
+                   class="w-full px-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-tech-500 focus:border-transparent text-sm">
+          </div>
+
+          <div>
+            <label for="lead-phone" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+              Telefone / WhatsApp com DDD
+            </label>
+            <input type="tel" id="lead-phone" required placeholder="(71) 99999-9999" 
+                   class="w-full px-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-tech-500 focus:border-transparent text-sm">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="lead-city" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+                Cidade
+              </label>
+              <select id="lead-city" class="w-full px-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-tech-500 focus:border-transparent text-sm">
+                <option value="Salvador">Salvador</option>
+                <option value="Lauro de Freitas">Lauro de Freitas</option>
+                <option value="Outra região metropolitana">Outra região metropolitana</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="lead-need" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+                Tipo de Necessidade
+              </label>
+              <select id="lead-need" class="w-full px-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-tech-500 focus:border-transparent text-sm">
+                <option value="Meu Computador quebrou">Meu Computador quebrou</option>
+                <option value="Quero um Upgrade">Quero um Upgrade</option>
+                <option value="Sou Empresa buscando TI">Sou Empresa buscando TI</option>
+                <option value="Outro assunto">Outro assunto</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="w-full inline-flex items-center justify-center gap-2.5 py-4 px-6 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-200 mt-2">
+            <i data-lucide="send" class="w-5 h-5"></i>
+            <span>ENVIAR E FALAR COM UM TÉCNICO</span>
+          </button>
+        </form>
+
+        <div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-800 text-center">
+          <p class="text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 font-semibold mb-4">OU PREFERE ATENDIMENTO INSTANTÂNEO?</p>
+          <a href="https://wa.me/5571987564072?text=Ol%C3%A1%2C%20gostaria%20de%20um%20atendimento%20t%C3%A9cnico%20imediato." 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-white font-bold text-sm sm:text-base border border-slate-300 dark:border-slate-600 hover:border-emerald-500 transition-colors">
+            <i data-lucide="phone-call" class="w-5 h-5 text-emerald-500 dark:text-emerald-400"></i>
+            <span>CHAMAR NO WHATSAPP AGORA (71) 98756-4072</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       FOOTER / RODAPÉ
+       ====================================================== -->
+  <footer class="bg-slate-900 dark:bg-slate-950 border-t border-slate-800 pt-16 pb-12 text-slate-400 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- INSTITUCIONAL -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-tech-500 flex items-center justify-center text-white">
+              <i data-lucide="cpu" class="w-5 h-5"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-extrabold text-lg tracking-tight text-white">GIGATECH</span>
+              <span class="text-[10px] font-semibold tracking-wider text-slate-400 uppercase -mt-1">Informática</span>
+            </div>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            Excelência em eletrônica avançada, manutenção de equipamentos e soluções em Tecnologia da Informação desde 2007.
+          </p>
+          <div class="flex items-center gap-3 text-slate-400 pt-1">
+            <span class="text-xs bg-slate-800/80 border border-slate-700 px-2.5 py-1 rounded text-slate-300">17+ Anos de História</span>
+            <span class="text-xs bg-slate-800/80 border border-slate-700 px-2.5 py-1 rounded text-slate-300">SSA & Lauro</span>
           </div>
         </div>
 
-        <!-- Quick Links -->
-        <div class="lg:col-span-3">
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider font-heading mb-4">Navegação Rápida</h4>
-          <ul class="space-y-2.5 text-sm">
-            <li><a href="#inicio" class="hover:text-emerald-400 transition-colors">Início</a></li>
-            <li><a href="#sobre" class="hover:text-emerald-400 transition-colors">Sobre Nós</a></li>
-            <li><a href="#servicos" class="hover:text-emerald-400 transition-colors">Serviços Contábeis</a></li>
-            <li><a href="#processo" class="hover:text-emerald-400 transition-colors">Como Funciona</a></li>
-            <li><a href="#segmentos" class="hover:text-emerald-400 transition-colors">Segmentos Atendidos</a></li>
-            <li><a href="#faq" class="hover:text-emerald-400 transition-colors">Perguntas Frequentes</a></li>
+        <!-- LINKS RÁPIDOS -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Links Rápidos</h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400">
+            <li><a href="#inicio" class="hover:text-white transition-colors">Início</a></li>
+            <li><a href="#para-voce" class="hover:text-white transition-colors">Serviços para Você</a></li>
+            <li><a href="#para-empresas" class="hover:text-white transition-colors">Suporte Corporativo</a></li>
+            <li><a href="#laboratorio" class="hover:text-white transition-colors">Termos de Garantia</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors">Política de Privacidade</a></li>
           </ul>
         </div>
 
-        <!-- Contact Info -->
-        <div class="lg:col-span-4">
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider font-heading mb-4">Informações de Contato</h4>
-          <ul class="space-y-3.5 text-sm">
-            <li class="flex items-start gap-3">
-              <i data-lucide="map-pin" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
-              <span>Av. Paulista, 1000 - Bela Vista, São Paulo - SP</span>
+        <!-- CONTATO DIRETO -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Contato Direto</h4>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-400">
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="phone" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <a href="https://wa.me/5571987564072" target="_blank" class="hover:text-white transition-colors">(71) 9 8756-4072</a>
             </li>
-            <li class="flex items-center gap-3">
-              <i data-lucide="phone" class="w-5 h-5 text-emerald-400 shrink-0"></i>
-              <a href="tel:+557132152955" class="hover:text-white transition-colors">(71) 3215-2955</a>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="mail" class="w-4 h-4 text-tech-400 shrink-0"></i>
+              <a href="mailto:contato@gigatechinformatica.com.br" class="hover:text-white transition-colors">contato@gigatechinformatica.com.br</a>
             </li>
-            <li class="flex items-center gap-3">
-              <i data-lucide="mail" class="w-5 h-5 text-emerald-400 shrink-0"></i>
-              <a href="mailto:contato@landcontabilidade.com.br" class="hover:text-white transition-colors">contato@landcontabilidade.com.br</a>
-            </li>
-            <li class="flex items-center gap-3">
-              <i data-lucide="clock" class="w-5 h-5 text-emerald-400 shrink-0"></i>
-              <span>Segunda a Sexta: 08:30 às 18:00</span>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="clock" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+              <span>Segunda a Sexta, das 08h às 18h</span>
             </li>
           </ul>
         </div>
 
+        <!-- UNIDADES RÁPIDAS -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Nossas Unidades</h4>
+          <div class="space-y-3 text-xs sm:text-sm text-slate-400">
+            <div>
+              <span class="text-white font-semibold block">Salvador:</span>
+              <span>Trav. Acalanto, 507 – Jd. das Margaridas</span>
+            </div>
+            <div>
+              <span class="text-white font-semibold block">Lauro de Freitas:</span>
+              <span>Rua Ernesto dos Santos, 208 – Ed. AA Center</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Copyright -->
-      <div class="pt-8 border-t border-navy-800 text-xs text-center flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p>&copy; <span id="current-year">2026</span> Land Contabilidade Consultiva &amp; Digital. Todos os direitos reservados.</p>
-        <p class="text-slate-500">Desenvolvido com foco em alta performance e conversão.</p>
+      <!-- DIREITOS E CNPJ -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>© <span id="current-year">2026</span> Gigatech Informática. Todos os direitos reservados.</p>
+        <p class="flex items-center gap-2">
+          <span>Desenvolvido com padrão de excelência laboratorial.</span>
+        </p>
       </div>
+
     </div>
   </footer>
 
-  <!-- =========================================================================
-       BOTÃO FLUTUANTE DE WHATSAPP (CANTO INFERIOR DIREITO)
-       ========================================================================= -->
-  <div class="fixed bottom-6 right-6 z-50 flex items-center group">
-    <!-- Tooltip balão de atendimento -->
-    <div class="hidden sm:flex mr-3 bg-white text-navy-900 text-xs font-semibold px-3 py-1.5 rounded-lg shadow-lg border border-slate-200 items-center gap-1.5 opacity-95">
-      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-      <span>Fale com o contador agora</span>
-    </div>
 
-    <!-- Botão com pulse ring -->
-    <a 
-      href="#" 
-      data-wa-action="floating" 
-      target="_blank" 
-      aria-label="Atendimento via WhatsApp" 
-      class="relative w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-transform transform hover:scale-110 animate-pulse-ring"
-    >
-      <i data-lucide="message-circle" class="w-7 h-7"></i>
-      <span class="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 border-2 border-white rounded-full"></span>
+  <!-- ======================================================
+       BOTÃO FLUTUANTE DO WHATSAPP (Alta Conversão)
+       ====================================================== -->
+  <aside aria-label="Atendimento via WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center group">
+    <div class="hidden md:flex items-center mr-3 px-3.5 py-1.5 rounded-full bg-white/95 dark:bg-dark-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-700 text-xs font-semibold text-slate-800 dark:text-slate-200 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
+      Online agora no WhatsApp
+    </div>
+    <a href="https://wa.me/5571987564072?text=Ol%C3%A1%2C%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20com%20a%20Gigatech." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Conversar no WhatsApp"
+       class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl pulse-glow hover:scale-110 transition-transform duration-300">
+      <i data-lucide="message-circle" class="w-7 h-7 fill-white"></i>
     </a>
-  </div>
+  </aside>
 
-  <!-- =========================================================================
-       MODAL DE SOLICITAÇÃO DE CONTATO / DIAGNÓSTICO TRIBUTÁRIO
-       ========================================================================= -->
-  <div id="contact-modal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-navy-900/80 backdrop-blur-sm">
-    <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-lg w-full p-6 sm:p-8 relative border border-slate-200">
-      
-      <!-- Close button -->
-      <button type="button" data-close-modal class="absolute top-4 right-4 text-slate-400 hover:text-navy-900 p-2 rounded-lg" aria-label="Fechar formulário">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-
-      <div class="mb-6">
-        <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3">
-          <i data-lucide="file-text" class="w-5 h-5"></i>
-        </div>
-        <h3 class="text-xl font-bold font-heading text-navy-900">Solicitar Diagnóstico Tributário</h3>
-        <p class="text-xs sm:text-sm text-slate-500 mt-1">
-          Preencha os dados abaixo e você será direcionado ao nosso especialista no WhatsApp com seus dados já estruturados.
-        </p>
-      </div>
-
-      <form id="lead-form" class="space-y-4">
-        <div>
-          <label for="lead-name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Seu Nome Completo *</label>
-          <input type="text" id="lead-name" required placeholder="Ex: Carlos Andrade" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label for="lead-phone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">WhatsApp *</label>
-            <input type="tel" id="lead-phone" required placeholder="(71) 99999-9999" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
-          </div>
-          <div>
-            <label for="lead-email" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">E-mail Corporativo *</label>
-            <input type="email" id="lead-email" required placeholder="nome@empresa.com" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
-          </div>
-        </div>
-
-        <div>
-          <label for="lead-segment" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Segmento de Atuação</label>
-          <select id="lead-segment" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent bg-white">
-            <option value="Prestadores de Serviços">Prestadores de Serviços</option>
-            <option value="Saúde & Clínicas">Saúde &amp; Clínicas</option>
-            <option value="Comércio & Varejo">Comércio &amp; Varejo</option>
-            <option value="Condomínios">Condomínios</option>
-            <option value="Agronegócio">Agronegócio</option>
-            <option value="Microempreendedor (MEI)">Microempreendedor (MEI)</option>
-            <option value="Outro Segmento">Outro Segmento</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="lead-msg" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Como podemos te ajudar?</label>
-          <textarea id="lead-msg" rows="3" placeholder="Ex: Quero reduzir impostos no Simples Nacional e trocar de contador..." class="w-full px-4 py-2 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none"></textarea>
-        </div>
-
-        <button type="submit" class="w-full py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm glow-emerald transition-all flex items-center justify-center gap-2">
-          <i data-lucide="send" class="w-4 h-4"></i>
-          <span>Enviar e Falar no WhatsApp</span>
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Scripts -->
+  <!-- Script Principal -->
   <script src="js/main.js"></script>
-  <script>
-    // Inicializar ícones Lucide
-    lucide.createIcons();
-  </script>
 </body>
 </html>

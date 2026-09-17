@@ -1,207 +1,176 @@
-/**
- * LAND CONTABILIDADE - MAIN JAVASCRIPT
- * Gestão de Interações, WhatsApp Tracking, Modal de Proposta e FAQ
- */
+// Main JavaScript for Gigatech Informática Landing Page
 
-// Central Configuration - Fácil de customizar
-const COMPANY_CONFIG = {
-  name: "Land Contabilidade Consultiva & Digital",
-  phoneDisplay: "(71) 3215-2955",
-  phoneRaw: "557132152955", // DDI 55 + DDD 71 + 32152955
-  email: "contato@landcontabilidade.com.br",
-  address: "Av. Paulista, 1000 - Bela Vista, São Paulo - SP",
-  openingHours: "Segunda a Sexta: 08:30 às 18:00",
-  social: {
-    instagram: "https://instagram.com",
-    linkedin: "https://linkedin.com",
-    facebook: "https://facebook.com"
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize Lucide Icons
+  if (window.lucide) {
+    window.lucide.createIcons();
   }
-};
 
-/**
- * Utilitário para gerar links de WhatsApp com mensagens pré-formatadas
- */
-function createWhatsAppUrl(customMessage) {
-  const text = encodeURIComponent(customMessage || "Olá! Gostaria de falar com um especialista da Land Contabilidade.");
-  return `https://wa.me/${COMPANY_CONFIG.phoneRaw}?text=${text}`;
-}
+  // Set current year in footer
+  const yearEl = document.getElementById('current-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 
-document.addEventListener("DOMContentLoaded", () => {
-  // 1. Inicializar e atualizar links do WhatsApp dinamicamente
-  document.querySelectorAll("[data-wa-action]").forEach(element => {
-    const action = element.getAttribute("data-wa-action");
-    let msg = "Olá! Gostaria de falar com um especialista da Land Contabilidade.";
+  // Theme Management (Dark Mode & Clean Mode)
+  const htmlEl = document.documentElement;
+  const themeToggles = document.querySelectorAll('.theme-toggle-btn');
+  
+  function updateThemeUI(theme) {
+    themeToggles.forEach(btn => {
+      const iconSun = btn.querySelector('.theme-icon-sun');
+      const iconMoon = btn.querySelector('.theme-icon-moon');
+      const label = btn.querySelector('.theme-label');
 
-    switch(action) {
-      case "header":
-        msg = "Olá! Vim pelo site e gostaria de tirar dúvidas com um especialista contábil.";
-        break;
-      case "hero":
-        msg = "Olá! Vi a proposta da Land Contabilidade e quero saber como ter menos burocracia e mais lucro para minha empresa.";
-        break;
-      case "fiscal":
-        msg = "Olá! Tenho interesse na Gestão Fiscal & Contábil Completa para minha empresa.";
-        break;
-      case "estrategica":
-        msg = "Olá! Gostaria de agendar um Diagnóstico Tributário e Assessoria Empresarial Estratégica.";
-        break;
-      case "dp":
-        msg = "Olá! Gostaria de saber mais sobre a gestão de Departamento Pessoal e eSocial.";
-        break;
-      case "mei":
-        msg = "Olá! Gostaria de suporte para MEI / Migração para Microempresa (ME).";
-        break;
-      case "floating":
-        msg = "Olá! Estou navegando no site da Land Contabilidade e gostaria de um atendimento imediato.";
-        break;
-      case "final":
-        msg = "Olá! Quero uma contabilidade que jogue no meu time. Como podemos iniciar o diagnóstico?";
-        break;
-      default:
-        msg = element.getAttribute("data-wa-custom") || msg;
+      if (theme === 'clean') {
+        if (iconSun) iconSun.classList.add('hidden');
+        if (iconMoon) iconMoon.classList.remove('hidden');
+        if (label) label.textContent = 'Modo Dark';
+        btn.setAttribute('title', 'Alternar para Modo Dark');
+      } else {
+        if (iconSun) iconSun.classList.remove('hidden');
+        if (iconMoon) iconMoon.classList.add('hidden');
+        if (label) label.textContent = 'Modo Clean';
+        btn.setAttribute('title', 'Alternar para Modo Clean');
+      }
+    });
+
+    if (window.lucide) {
+      window.lucide.createIcons();
     }
+  }
 
-    element.href = createWhatsAppUrl(msg);
-  });
-
-  // 2. Navbar Scroll Effect
-  const navbar = document.getElementById("main-nav");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add("shadow-lg", "bg-opacity-95");
+  function setTheme(theme) {
+    if (theme === 'clean') {
+      htmlEl.classList.remove('dark');
+      localStorage.setItem('gigatech-theme', 'clean');
+      updateThemeUI('clean');
     } else {
-      navbar.classList.remove("shadow-lg");
+      htmlEl.classList.add('dark');
+      localStorage.setItem('gigatech-theme', 'dark');
+      updateThemeUI('dark');
     }
+  }
+
+  // Initialize theme from localStorage (default: dark)
+  const savedTheme = localStorage.getItem('gigatech-theme') || 'dark';
+  setTheme(savedTheme);
+
+  // Bind click handlers to theme toggle buttons
+  themeToggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isCurrentlyDark = htmlEl.classList.contains('dark');
+      setTheme(isCurrentlyDark ? 'clean' : 'dark');
+    });
   });
 
-  // 3. Mobile Menu Toggle
-  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const menuIconOpen = document.getElementById("menu-icon-open");
-  const menuIconClose = document.getElementById("menu-icon-close");
+  // Mobile Menu Toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
   if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener("click", () => {
-      const isOpen = !mobileMenu.classList.contains("hidden");
-      if (isOpen) {
-        mobileMenu.classList.add("hidden");
-        menuIconOpen.classList.remove("hidden");
-        menuIconClose.classList.add("hidden");
-      } else {
-        mobileMenu.classList.remove("hidden");
-        menuIconOpen.classList.add("hidden");
-        menuIconClose.classList.remove("hidden");
-      }
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('hidden');
     });
 
-    // Close mobile menu when clicking a link
-    mobileMenu.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-        menuIconOpen.classList.remove("hidden");
-        menuIconClose.classList.add("hidden");
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
       });
     });
   }
 
-  // 4. Accordion FAQ
-  const faqItems = document.querySelectorAll(".faq-item");
+  // FAQ Accordion functionality
+  const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
-    const header = item.querySelector(".faq-header");
-    header.addEventListener("click", () => {
-      const isActive = item.classList.contains("active");
+    const questionBtn = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    const icon = item.querySelector('.faq-icon');
 
-      // Fecha outros itens para efeito clean de sanfona
-      faqItems.forEach(otherItem => {
-        if (otherItem !== item) {
-          otherItem.classList.remove("active");
-          const icon = otherItem.querySelector(".faq-icon");
-          if (icon) icon.style.transform = "rotate(0deg)";
+    if (questionBtn && answer) {
+      questionBtn.addEventListener('click', () => {
+        const isOpen = !answer.classList.contains('hidden');
+
+        // Close all other open answers
+        faqItems.forEach(otherItem => {
+          const otherAnswer = otherItem.querySelector('.faq-answer');
+          const otherIcon = otherItem.querySelector('.faq-icon');
+          if (otherAnswer && otherAnswer !== answer) {
+            otherAnswer.classList.add('hidden');
+            if (otherIcon) {
+              otherIcon.classList.remove('rotate-180');
+            }
+          }
+        });
+
+        // Toggle current
+        if (isOpen) {
+          answer.classList.add('hidden');
+          if (icon) icon.classList.remove('rotate-180');
+        } else {
+          answer.classList.remove('hidden');
+          if (icon) icon.classList.add('rotate-180');
         }
       });
-
-      // Alterna o atual
-      if (isActive) {
-        item.classList.remove("active");
-        const icon = item.querySelector(".faq-icon");
-        if (icon) icon.style.transform = "rotate(0deg)";
-      } else {
-        item.classList.add("active");
-        const icon = item.querySelector(".faq-icon");
-        if (icon) icon.style.transform = "rotate(180deg)";
-      }
-    });
+    }
   });
 
-  // 5. Modal de Solicitação de Contato / Diagnóstico
-  const contactModal = document.getElementById("contact-modal");
-  const openModalBtns = document.querySelectorAll("[data-open-modal]");
-  const closeModalBtns = document.querySelectorAll("[data-close-modal]");
-  const leadForm = document.getElementById("lead-form");
+  // Phone Mask for WhatsApp input
+  const phoneInput = document.getElementById('lead-phone');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', (e) => {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length > 11) value = value.slice(0, 11);
 
-  function openModal() {
-    if (contactModal) {
-      contactModal.classList.add("open");
-      document.body.style.overflow = "hidden";
-    }
-  }
-
-  function closeModal() {
-    if (contactModal) {
-      contactModal.classList.remove("open");
-      document.body.style.overflow = "";
-    }
-  }
-
-  openModalBtns.forEach(btn => btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    openModal();
-  }));
-
-  closeModalBtns.forEach(btn => btn.addEventListener("click", closeModal));
-
-  if (contactModal) {
-    contactModal.addEventListener("click", (e) => {
-      if (e.target === contactModal) {
-        closeModal();
+      if (value.length > 10) {
+        // (XX) XXXXX-XXXX
+        value = value.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+      } else if (value.length > 6) {
+        // (XX) XXXX-XXXX
+        value = value.replace(/^(\d{2})(\d{4,5})(\d{0,4})$/, '($1) $2-$3');
+      } else if (value.length > 2) {
+        value = value.replace(/^(\d{2})(\d{0,5})$/, '($1) $2');
+      } else if (value.length > 0) {
+        value = value.replace(/^(\d{0,2})$/, '($1');
       }
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && contactModal.classList.contains("open")) {
-        closeModal();
-      }
+      e.target.value = value;
     });
   }
 
-  // 6. Formulário de Lead integrado ao WhatsApp
+  // Lead Form WhatsApp Submission
+  const leadForm = document.getElementById('lead-form');
   if (leadForm) {
-    leadForm.addEventListener("submit", (e) => {
+    leadForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const name = document.getElementById("lead-name").value.trim();
-      const phone = document.getElementById("lead-phone").value.trim();
-      const email = document.getElementById("lead-email").value.trim();
-      const segment = document.getElementById("lead-segment").value;
-      const message = document.getElementById("lead-msg").value.trim();
+      const name = document.getElementById('lead-name')?.value.trim() || '';
+      const phone = document.getElementById('lead-phone')?.value.trim() || '';
+      const city = document.getElementById('lead-city')?.value || 'Salvador / Lauro de Freitas';
+      const need = document.getElementById('lead-need')?.value || 'Não informado';
 
-      const formattedMsg = 
-`*Solicitação de Diagnóstico Contábil - Site Land*
-👤 *Nome:* ${name}
-📱 *WhatsApp:* ${phone}
-✉️ *E-mail:* ${email}
-🏢 *Segmento:* ${segment || "Não informado"}
-💬 *Observação:* ${message || "Gostaria de agendar um diagnóstico contábil."}`;
+      if (!name || !phone) {
+        alert('Por favor, preencha seu nome e telefone para contato.');
+        return;
+      }
 
-      const waUrl = createWhatsAppUrl(formattedMsg);
-      closeModal();
-      window.open(waUrl, "_blank");
+      // Build personalized WhatsApp text
+      const message = `*Olá, equipe da Gigatech Informática!*\n` +
+        `Gostaria de solicitar atendimento através da página web:\n\n` +
+        `👤 *Nome:* ${name}\n` +
+        `📱 *Telefone/WhatsApp:* ${phone}\n` +
+        `📍 *Cidade:* ${city}\n` +
+        `🔧 *Necessidade:* ${need}\n\n` +
+        `_Aguardo retorno de um especialista. Obrigado!_`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/5571987564072?text=${encodedMessage}`;
+
+      // Open WhatsApp in a new tab
+      window.open(whatsappUrl, '_blank');
     });
-  }
-
-  // 7. Atualizar ano no footer
-  const yearSpan = document.getElementById("current-year");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
   }
 });
